@@ -1,0 +1,9 @@
+表3  自由模型与6个单对等值约束模型拟合（嵌套关系，Δdf=1）,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5
+模型,说明,χ²,df,NPAR,相对自由模型Δχ²
+free,自由模型（6前因均自由→NT/ST，比较基准）,1256.014,564,102,0
+eq_pc,约束 PC→NT = PC→ST,1257.303,565,101,1.288
+eq_fs,约束 FS→NT = FS→ST,1258.926,565,101,2.911
+eq_pfe,约束 PFE→NT = PFE→ST,1256.351,565,101,0.337
+eq_wce,约束 WCE→NT = WCE→ST,1256.428,565,101,0.414
+eq_psc,约束 PSC→NT = PSC→ST,1257.72,565,101,1.706
+eq_parv,约束 PARV→NT = PARV→ST,1277.669,565,101,21.655
