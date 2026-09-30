@@ -1,0 +1,10 @@
+口径与方法说明
+样本N=274；6前因与NT/ST均由所属题项取平均得到构念分(1-5)，无反向题；ID不进模型。
+"两个平行任务：PC,FS,PFE,WCE,PSC,PARV -> NT；同样6个 -> ST，输入/CV/算法/选参原则/指标完全一致。"
+交叉验证：Repeated Nested 5-fold，外层5折×10重复=50个测试折评价泛化；内层5折同时为ElasticNet和XGBoost选超参；随机种子SEED=2026。
+"R2_CV/RMSE/MAE均为外层未见样本(out-of-fold)口径；R2_CV是“对未见样本的预测力”，与SEM样本内R2(NT=.358,ST=.562)不是同一指标，通常更低、属正常。"
+SHAP基于每折外层模型在其测试折上计算并汇总50折：平均排名、进Top2次数(/50)衡量排名稳定性；另用全量模型给出最终mean|SHAP|与带符号方向。
+Elastic Net为线性基准、XGBoost为非线性主模型；两者性能接近说明前因-信任关系以线性为主，并非失败。
+Q42不进入任何预测模型(避免概念重叠/信息泄漏)，仅在ML结束后作“显性主观优先级 vs SHAP预测贡献”的辅助对照。
+ML与SEM为同一批274人，只能称“预测层面的补充验证/convergent predictive evidence”，不能称独立验证；ML结果不回改SEM。
+SHAP方向措辞用“associated with higher predicted NT/ST”，不写因果(causes)。
